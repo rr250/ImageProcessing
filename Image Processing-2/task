@@ -1,0 +1,3 @@
+•	Crop the snippets - take the ROI from csv file
+•	save all the snippets in respective folders
+•	Draw all the region coordinates available in csv file and save the file with naming conventions. Field name as the file name . Field name is available in respective csv file.
