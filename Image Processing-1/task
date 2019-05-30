@@ -1,0 +1,4 @@
+Task : 
+•	Read all the images from folder , which accept all image formats other than PDF.
+•	Find contours and write all contour images in to specified the output folder.
+•	Create sub folder under the name of filename and write the segmented images to the relevant folders.
