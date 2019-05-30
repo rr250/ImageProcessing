@@ -56,7 +56,7 @@ try:
     outpath=sys.argv[2]
     if not os.path.exists(outpath):
         os.makedirs(outpath)
-        logging.basicConfig(filename=os.path.join(outpath,'app.log'), filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(filename=os.path.join(outpath,'app.log'), filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 except Exception:
    logging.error("Exception occurred")
 
