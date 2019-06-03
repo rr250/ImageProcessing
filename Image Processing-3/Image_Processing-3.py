@@ -25,18 +25,6 @@ def draw_contours(img,filename,outpath,cwd):
     try:
         imgray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
         ret,thresh = cv2.threshold(imgray, 120,255,cv2.THRESH_BINARY)
-        th3 = cv2.adaptiveThreshold(imgray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY,3,15)
-        y,x=th3.shape
-        for i in range(y):
-            c=0
-            for j in range(x):
-                if th3[i][j]==0:
-                    c+=1
-            if c<15:
-                for j in range(x):
-                    th3[i][j]=255
-        kernel = np.ones((3, 3), np.uint8) 
-        closing = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel, iterations = 2) 
         image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         path = os.path.join(outpath,filename)
         if not os.path.exists(path):
